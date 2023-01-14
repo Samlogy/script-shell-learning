@@ -1,4 +1,4 @@
-# Check the file file1 and file2
+## Check the file file1 and file2
 file1="./file1"
 file2="./file2"
 
@@ -46,3 +46,13 @@ if [ -e "$file1" ]; then
     fi
     
 fi
+
+## the process of reading file is done line by line
+
+LINE=1
+
+while read -r CURRENT_LINE
+	do
+		echo "$LINE: $CURRENT_LINE"
+    ((LINE++))
+done < "sample_file.txt"
