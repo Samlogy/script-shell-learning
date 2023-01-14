@@ -1,8 +1,8 @@
 echo "Variables / constants"
 
-declare -r NUM=5
+declare -r NUM=5 # constant
 
-name='sam' # can be a variable / constant
+name='sam' # variable
 number=6
 
 # print message
