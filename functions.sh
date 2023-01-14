@@ -1,5 +1,4 @@
-# Function
-
+## Function
 getDate() {
     date
     return
