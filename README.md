@@ -80,3 +80,9 @@ grep: filter the content of file to make our search easy
     "curl" donwload a resource
     curl -O <fileLink>  
 
+    "locate" (same as find: search for files/directories)
+    locate <file name> 
+
+    "less / more": (displays content of a file in case large files)
+    less <file name>  // has same feature as more, with some more
+    more <file name>  
