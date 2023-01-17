@@ -86,3 +86,24 @@ grep: filter the content of file to make our search easy
     "less / more": (displays content of a file in case large files)
     less <file name>  // has same feature as more, with some more
     more <file name>  
+
+
+## Environment Variables
+Variables that specific to a certain environment
+some env variables in linux: USER, HOME, SHELL, LANG, MAIL
+ex: echo $HOME $USER $SHELL $LANG $MAIL
+
+NB:
+    * These environment variables vary based on the current user session.
+    * display all envrironment variables in linux (env)
+    * print an envrironment variables 
+        printenv VARIABLE_NAME
+        echo $VARIABLE_NAME
+    * set an envrironment variable in linux
+        Not Persistant: --> export VARIABLE_NAME=value 
+        Persistant: --> same syntax + add it inside .bashrc file (at the end) save
+        Persistent Global Variable --> (it's a persistant environment variable accessible by all users)
+            export GLOBAL_VARIABLE="This is a global variable"
+            edit: /etc/environment
+            edit: /etc/profile (add this at the end) --> export GLOBAL_VARIABLE="This is a global variable"
+            
