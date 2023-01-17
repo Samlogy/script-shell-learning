@@ -73,3 +73,10 @@ grep: filter the content of file to make our search easy
     [^ ..] Matches anything apart from what is contained in the brackets
     
     ex: grep ^p content (display all string that start with p character in content file)
+
+    "wget" donwload a resource
+    wget <fileLink>  
+
+    "curl" donwload a resource
+    curl -O <fileLink>  
+
