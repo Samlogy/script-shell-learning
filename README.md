@@ -26,12 +26,11 @@ code will be interpreted line by line
 - positional- parameters
 - execute- linux- command- line
 
-Commands:
-ssh - kill - less - lsof - awk
+*** Useful Commands: ***
 
-find: locate / search files & directories
-find {path} {name of the file or directory to search} {action to take}
-ex: find . -name hello1.txt (search for hello1.txt file)
+    "find" (locate / search files & directories)
+    find {path} {name of the file or directory to search} {action to take}
+    ex: find . -name hello1.txt (search for hello1.txt file)
 
     find . -name hello1.txt  (hello1.txt)
     find . -name *.txt  (file extension .txt)
@@ -45,12 +44,11 @@ ex: find . -name hello1.txt (search for hello1.txt file)
     find / -size +1M -size -3M 2>>/dev/null  (find files that contain size between 1-3mb)
     find / -name -mtime -10 (search files/dir modified ) [-10: less 10 days / +10: 10 days ago / 10: exactly 10 days ]
 
-grep: filter the content of file to make our search easy
-"Grep"
-grep <searchWord> <file name> (withour PIPE)
-grp string-name content (display lines that matched the string-name)
-grep -v string-name content (display result that do not match searched string)
-grep -i red content (result all where red appear case insensitive)
+    "Grep" (filter the content of a file to simplify out search)
+    grep <searchWord> <file name> (withour PIPE)
+    grp string-name content (display lines that matched the string-name)
+    grep -v string-name content (display result that do not match searched string)
+    grep -i red content (result all where red appear case insensitive)
 
     grep -A<lineNumber> <searchWord> <fileName>  (display line number before the result)
     grep -B<lineNumber> <searchWord> <fileName>  (display line number after the result)
@@ -74,21 +72,22 @@ grep -i red content (result all where red appear case insensitive)
 
     ex: grep ^p content (display all string that start with p character in content file)
 
-    "wget" donwload a resource
+    "wget" donwload a file from internet
     wget <ulr> 
     wget -O sratoolkit.tar.gz <url> --> save file with a different name
     wget -P /home/renesh/software <ulr> --> save file under a different directory
     wget -P /home/renesh/software -O sratoolkit.tar.gz <ulr> --> save file with different name & different location
      
-    "curl" donwload a resource
+    "curl" donwload a file from internet
     curl -O <ulr>
 
     "locate" (same as find: search for files/directories)
     locate <file name>
 
     "less / more": (exploring large files) less is better than more options
-    less <file name>  // has same feature as more, with some more
+    less <file name>  
     more <file name>
+    //less has same feature as more, with some more
 
     "cat" display / merge / append
     cat <file name> --> display file content
