@@ -150,6 +150,19 @@ grep -i red content (result all where red appear case insensitive)
     it requires a sorted file
     sort file | uniq -c --> count the unique line in a sorted file
 
+    "Sort" sort file content in ascending / descending order / other filters(options)
+    sort file.txt --> sort file in asc order (default)
+    sort -r file.txt --> sort in desc
+
+    "sed" & "tr"
+    "sed" editing text
+    sed 's/Chr1/Chr2/' file.txt --> replace chr1 with chr2 in file
+
+    "tr" translate / delete characters
+    cat file | tr 'h' 'H' --> change h to H in file then display content of file
+    cat file | tr "hello" "HELLO" --> replace multiple characters in file
+    cat file | tr -d "A" --> delete a specific character(s) in file
+
     "ssh"
     connect to remote SSH server safely (login to the server in required)
     ssh username@remote_host --> (provide sam + password)
