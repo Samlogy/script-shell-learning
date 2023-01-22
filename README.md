@@ -75,10 +75,13 @@ grep -i red content (result all where red appear case insensitive)
     ex: grep ^p content (display all string that start with p character in content file)
 
     "wget" donwload a resource
-    wget <fileLink>
-
+    wget <ulr> 
+    wget -O sratoolkit.tar.gz <url> --> save file with a different name
+    wget -P /home/renesh/software <ulr> --> save file under a different directory
+    wget -P /home/renesh/software -O sratoolkit.tar.gz <ulr> --> save file with different name & different location
+     
     "curl" donwload a resource
-    curl -O <fileLink>
+    curl -O <ulr>
 
     "locate" (same as find: search for files/directories)
     locate <file name>
@@ -129,6 +132,38 @@ grep -i red content (result all where red appear case insensitive)
     which vi --> absolute path of installed tool
     which blastn blastx --> absolute path of blastn and blastx
 
+    "History"
+    history --> access history of commands
+    history 10 --> 10 latest cmds
+    history | head --> 10 oldest cmds
+    history tail --> 10 latest cmds
+    history -d 100 --> delete cmd which is in the line 100
+    history | grep unzip --> search from cmd with unzip
+
+    "wc" & "uniq" counting purpose
+    wc file.txt --> give all details number of file (lines, words, characters)
+    wc -m file --> nbr of characters
+    wc -l file --> nbr of lines in file
+    wc -w file --> nbr of words in file
+    
+    uniq file.txt --> unique / duplicate line (prefix line, print, comparing lines, case sensitive)
+    it requires a sorted file
+    sort file | uniq -c --> count the unique line in a sorted file
+
+    "ssh"
+    connect to remote SSH server safely (login to the server in required)
+    ssh username@remote_host --> (provide sam + password)
+    ssh -X username@remote_host --> 
+    // login with ssh Passwordless 
+
+    "scp" copy data from a remote server to the localhost & vise versa (safely)
+    From Remote to Local
+    scp username@remote_host:PATH/FILE PATH/local/host --> for files
+    scp -r username@remote_host:PATH/DIR PATH/local/host --> directory
+    
+    From Local to Remote
+    cp PATH/local/host/FILE username@remote_host:PATH --> files
+    scp -r PATH/local/host/DIR username@remote_host:PATH --> directory
 ## Environment Variables
 
 Variables that specific to a certain environment
