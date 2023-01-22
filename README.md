@@ -73,10 +73,10 @@ code will be interpreted line by line
     ex: grep ^p content (display all string that start with p character in content file)
 
     "wget" donwload a file from internet
-    wget <ulr> 
+    wget <url> 
     wget -O sratoolkit.tar.gz <url> --> save file with a different name
     wget -P /home/renesh/software <ulr> --> save file under a different directory
-    wget -P /home/renesh/software -O sratoolkit.tar.gz <ulr> --> save file with different name & different location
+    wget -P /home/renesh/software -O sratoolkit.tar.gz <url> --> save file with different name & different location
      
     "curl" donwload a file from internet
     curl -O <ulr>
@@ -126,7 +126,7 @@ code will be interpreted line by line
     cat f1 f2 > f3 2> f-err (stdout in f3 and stderr in f-err) 
     // f2: does not exist / f3: stdout / f-err: stderr / f-both: stdout + stderr 
 
-    "which" (search abslute path of cmd/tools)
+    "which" (search absolute path of cmd/tools)
     which ls --> absolute path of ls command
     which vi --> absolute path of installed tool
     which blastn blastx --> absolute path of blastn and blastx
@@ -162,6 +162,11 @@ code will be interpreted line by line
     cat file | tr "hello" "HELLO" --> replace multiple characters in file
     cat file | tr -d "A" --> delete a specific character(s) in file
 
+    "Help message command"
+    mkdir --help --> detailed info about a cmd
+    man mkdir --> manual of usage of a cmd
+    info mkdir --> info about a cmd
+
     "ssh"
     connect to remote SSH server safely (login to the server in required)
     ssh username@remote_host --> (provide sam + password)
@@ -195,3 +200,6 @@ Persistent Global Variable --> (it's a persistant environment variable accessibl
 export GLOBAL_VARIABLE="This is a global variable"
 edit: /etc/environment
 edit: /etc/profile (add this at the end) --> export GLOBAL_VARIABLE="This is a global variable"
+
+
+wc / uniq - stdrin / stdout / stderr - sort - grep - find / locate - sed / tr - zip/tar ...
