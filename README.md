@@ -118,9 +118,14 @@ code will be interpreted line by line
     unzip -l archive.tar --> list zip archive without extraction
     unzip archive.zip --> unzip .zip file
 
-    "STDOUT STDERR"
+    "STDIN - STDOUT - STDERR"
+    (stdin)
+    cat 0< file (cat will receive file as an input)
+    cat < file
+    (stdout)
     cat file2.txt file3.txt > stdout.txt >2 stderr.txt
     cat f1 f2 > f3 // > or  >1 (redirect standard output) 
+    (stderr)
     cat f2 2> f-err // 2> (redirect standard error)
     cat f2 &> f-both // &> (redirect standard output & error) 
     cat f1 f2 > f3 2> f-err (stdout in f3 and stderr in f-err) 
@@ -202,4 +207,4 @@ edit: /etc/environment
 edit: /etc/profile (add this at the end) --> export GLOBAL_VARIABLE="This is a global variable"
 
 
-wc / uniq - stdrin / stdout / stderr - sort - grep - find / locate - sed / tr - zip/tar ...
+wc / uniq - stdin / stdout / stderr - sort - grep - find / locate - sed / tr - zip/tar ...
