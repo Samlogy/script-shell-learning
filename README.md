@@ -287,7 +287,45 @@ vi: The default editor that comes with the UNIX operating system is called vi (v
     :1,$ mo $ moves lines from 1 to $ after last line.
     :.,.+5 mo 10 moves line from present line ans next 5 lines after 10th line onwards.
     :.-3,. mo 10 moves present line and above 3 lines after 10th line.
+
+## Permissions / Ownership / Group
+    "Permissions"
+    r = read permission
+    w = write permission
+    x = execute permission
+    – = no permission
+
+    Ex: chmod permissions filename
+    2 ways of permission command:
+        - Absolute mode (numbers) ex: chmod 777 filename
+        - Symbolic mode (specify perimission letter) ex: chmod +r filename
     
+    chmod g+rwx filename --> give group read / write / execute permissions
+    chmod o+w filename --> give other write permission
+    chmod u+w filename --> take away from user write permission
+    chmod a+rwx filename --> gile everyone all permisions
+    chmod ug+rwx,o=rx file_name --> give filename permissions user/group/other
+
+    user donations:
+    u: user / owner
+    o: other
+    g: group
+    a: all
+
+
+    "GROUP"
+    chgrp groupname filename
+    chgrp groupname foldername
+
+    Ex: chgrp sam-group filename --> change filename group --> sam-group
+
+
+    "OWNERSHIP"
+    chown name filename
+    chown name foldername
+
+    Ex: chown aissam foldername
+
 wc / uniq - stdin / stdout / stderr - sort - grep - find / locate - sed / tr - zip/tar ...
 
 
