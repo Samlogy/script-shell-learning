@@ -207,4 +207,90 @@ edit: /etc/environment
 edit: /etc/profile (add this at the end) --> export GLOBAL_VARIABLE="This is a global variable"
 
 
+## How to use VI
+vi: The default editor that comes with the UNIX operating system is called vi (visual editor)
+
+    "Basics vi"
+    vi f1 --> opens f1 with vi
+    vi -R f1 --> Opens an existing file in read only mode.
+    view f1 --> Opens an existing file in read only mode.
+
+    // VI workflow
+    cmd mode --> insert mode (iIOaA)
+    insert mode --> cmd mode (esc)
+    insert mode --> escape mode (:q) 
+    escape mode --> cmd mode (entrer)
+    cmd mode --> escape mode (:)
+
+    // Saving and Closing the file
+    :q --> quit
+    :wq --> save & quit
+    :w --> Save the file but keep it open
+    :q! –-> Quit vi and do not save changes
+    Shift+zz –-> Save the file and quit
+
+    // Moving within a file
+    k --> Move cursor up
+    j --> Move cursor down
+    h --> Move cursor left
+    l --> Move cursor right
+
+    // VI Editing commands
+    "WRITE / EDIT"
+    i : Inserts text before current cursor location.
+    I : Inserts text at beginning of current line.
+    a : Inserts text after current cursor location.
+    A : Inserts text at end of current line.
+    o : Creates a new line for text entry below cursor location.
+    O : Creates a new line for text entry above cursor location.
+    r : Replace single character under the cursor with the next character typed.
+    R : Replaces text from the cursor to right.
+    s : Replaces single character under the cursor with any number of characters.
+    S :Replaces entire line.
+
+    "DELETE"
+    X Uppercase: Deletes the character before the cursor location.
+    x Lowercase : Deletes the character at the cursor location.
+    Dw : Deletes from the current cursor location to the next word.
+    d^ : Deletes from current cursor position to the beginning of the line.
+    d$ : Deletes from current cursor position to the end of the line.
+    Dd : Deletes the line the cursor is on.
+
+    "COPY / PAST"
+    Yy : Copies the current line.
+    9yy : Yank current line and 9 lines below.
+    p : Puts the copied text after the cursor.
+    P : Puts the yanked text before the cursor.
+
+    "SEARCH / REPLACE"
+    :s/pattern/replace/ 
+    :s/pattern
+    :%s/pattern/replace/ 
+
+    "Block DELETE CMD"
+    :1d delete the line 1.
+    :1,5d deletes the lines from 1 to 5.
+    :10,$d deletes lines from 10th line to the last of the file. ($ means last line of file).
+    :.,$d deletes lines from present line to that last line. (. means the present line).
+    :.-3,.d deletes the lines from present line and above 2 lines (deletes 3 lines including the cursor line).
+    :.,.+4d deletes the lines from present cursor line followed 3 lines (total 3 lines).
+    :16 deletes the 16 line of the file.
+    
+    "Block COPY CMD"
+    :1,5 co 10 copies the lines from 1 to 5 after 10th line.
+    :1,$ co $ copies the lines from 1 to last line after last line.
+    :.,.+5 co 8 copies lines from present to 5 lines after 8th line.
+    :-3,. co 10 copies the lines from present cursor line above 3 lines after 10th line.
+
+    "Block MOVING CMD"
+    :1,5 mo 9 moves line from 1 to 5 after 9th line.
+    :1,$ mo $ moves lines from 1 to $ after last line.
+    :.,.+5 mo 10 moves line from present line ans next 5 lines after 10th line onwards.
+    :.-3,. mo 10 moves present line and above 3 lines after 10th line.
+    
 wc / uniq - stdin / stdout / stderr - sort - grep - find / locate - sed / tr - zip/tar ...
+
+
+## SSH setup passwordless
+
+## How to Automate Tasks with cron Jobs
