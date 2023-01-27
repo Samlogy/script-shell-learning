@@ -171,21 +171,6 @@ code will be interpreted line by line
     mkdir --help --> detailed info about a cmd
     man mkdir --> manual of usage of a cmd
     info mkdir --> info about a cmd
-
-    "ssh"
-    connect to remote SSH server safely (login to the server in required)
-    ssh username@remote_host --> (provide sam + password)
-    ssh -X username@remote_host --> 
-    // login with ssh Passwordless 
-
-    "scp" copy data from a remote server to the localhost & vise versa (safely)
-    From Remote to Local
-    scp username@remote_host:PATH/FILE PATH/local/host --> for files
-    scp -r username@remote_host:PATH/DIR PATH/local/host --> directory
-    
-    From Local to Remote
-    cp PATH/local/host/FILE username@remote_host:PATH --> files
-    scp -r PATH/local/host/DIR username@remote_host:PATH --> directory
 ## Environment Variables
 
 Variables that specific to a certain environment
@@ -312,7 +297,6 @@ vi: The default editor that comes with the UNIX operating system is called vi (v
     g: group
     a: all
 
-
     "GROUP"
     chgrp groupname filename
     chgrp groupname foldername
@@ -329,6 +313,22 @@ vi: The default editor that comes with the UNIX operating system is called vi (v
 wc / uniq - stdin / stdout / stderr - sort - grep - find / locate - sed / tr - zip/tar ...
 
 
-## SSH setup passwordless
+## SSH 
+    "SSH"
+    connect to remote SSH server safely (login to the server in required)
+    ssh username@remote_host --> (provide sam + password)
+    ssh -X username@remote_host -->
+    // login with ssh Passwordless
+
+    "SCP" copy data from a remote server to the localhost & vise versa (safely)
+    From Remote to Local
+    scp username@remote_host:PATH/FILE PATH/local/host --> for files
+    scp -r username@remote_host:PATH/DIR PATH/local/host --> directory
+    
+    From Local to Remote
+    cp PATH/local/host/FILE username@remote_host:PATH --> files
+    scp -r PATH/local/host/DIR username@remote_host:PATH --> directory
+
+    "setup passwordless"
 
 ## How to Automate Tasks with cron Jobs
